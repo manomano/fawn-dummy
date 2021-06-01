@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  padding: 5%;
+}
+.header-container {
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 3px;
+  padding: 3px 0 3px;
+  border-bottom: 2px solid black;
+}
+
+.header-container div {
+  font-size: 3rem;
+  min-width: 10rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  width: 12rem;
+  height: 5rem;
+  left: -1.75rem;
+  top: -0.7rem;
+  border: 1px solid black;
+  border-top-left-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  transform: skewX(338deg);
+}
+
+.inactive {
+  cursor: pointer;
+}
+
+.inactive:hover {
+  box-shadow: 5px 5px 8px rgb(203, 207, 203);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 3px;
+}
+.home__left {
+  width: 50%;
+  background: rgb(235, 235, 235);
+  height: 90vh;
+}
+
+.home__left__big {
+  font-size: 8rem;
+  font-family: "Open Sans", sans-serif;
+  transform: translate(35%, 35%);
+}
