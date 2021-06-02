@@ -10,31 +10,35 @@
   <body>
     <header>
       <div class="header-container">
-        <div class="logo">logo</div>
-        <div class="active">home</div>
-        <div class="inactive">about</div>
-        <div class="inactive">service</div>
-        <div class="inactive">works</div>
-        <div class="inactive">contact</div>
+        <a class="logo">logo</a>
+        <a href="#home" class="menu active">home</a>
+        <a href="#about" class="menu inactive">about</a>
+        <a href="#service" class="menu inactive">service</a>
+        <a href="#works" class="menu inactive">works</a>
+        <a href="#contact" class="menu inactive">contact</a>
       </div>
     </header>
     <div class="content">
-      <div class="home">
+      <div class="block" id="home">
         <div class="home__left">
           <p class="home__left__big">
             Experience design intelligent marketing for growing brands
           </p>
-          <p class="home__left__small">
-            Fawn is a communication agency, who specialize in digital marketing,
-            design and web development
-          </p>
-          <div class="circle">discuss the project</div>
+        </div>
+        <div class="home__right">
+          <div class="circle-container">
+            <div class="home__right__text">
+              Fawn is a communication agency, who specialize in digital
+              marketing, design and web development
+            </div>
+            <div class="circle">discuss the project</div>
+          </div>
         </div>
       </div>
-      <div class="about"></div>
-      <div class="service"></div>
-      <div class="works"></div>
-      <div class="contact"></div>
+      <div class="block" id="about">about aboutaboutvaboutv</div>
+      <div class="block" id="service">service service service service</div>
+      <div class="block" id="works">works works works works</div>
+      <div class="block" id="contact">contact contact contact</div>
     </div>
   </body>
 </html>
