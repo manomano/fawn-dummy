@@ -1,0 +1,139 @@
+@import "./variables";
+@import "./mixins";
+@import "./fonts";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $regular;
+}
+
+header {
+  padding: 5%;
+}
+.header-container {
+  display: grid;
+  grid-template-columns: 6fr 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 3px;
+  padding: 3px 0 3px;
+  border-bottom: 2px solid black;
+}
+
+.header-container a {
+  font-size: 3rem;
+  min-width: 10rem;
+  padding-bottom: 3rem;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-family: "Akzidenz-groteskPro-ext";
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  width: 12rem;
+  height: 5rem;
+  left: -1.75rem;
+  top: -0.7rem;
+  border: 1px solid black;
+  border-top-left-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  transform: skewX(338deg);
+}
+
+.inactive {
+  cursor: pointer;
+}
+
+.inactive:hover {
+  box-shadow: 5px 5px 8px rgb(203, 207, 203);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#home {
+  @include standardGridContainer;
+}
+
+.home {
+  &__left {
+    background: rgb(235, 235, 235);
+    height: 80vh;
+    position: relative;
+    &__big {
+      font-size: 8rem;
+      line-height: 8.8rem;
+      font-family: "Akzidenz-groteskPro-mdex";
+      font-weight: 500;
+      width: 90rem;
+      position: absolute;
+      left: 25%;
+      top: 18%;
+      width: 130rem;
+      margin: 0;
+    }
+  }
+  &__right {
+    border: 1px solid royalblue;
+    &__text {
+      font-size: 1.8rem;
+      line-height: 3rem;
+      width: 30rem;
+      color: black;
+      font-size: 2rem;
+      line-height: 3rem;
+      width: 30rem;
+      color: black;
+      grid-row: 6/7;
+      grid-column: 1/2;
+    }
+  }
+}
+
+.circle-container {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  padding-right: 10rem;
+  border: 1px solid green;
+  grid-template-rows: repeat(7, calc(80vh / 7));
+}
+
+.block {
+  scroll-behavior: smooth;
+}
+
+.circle {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  width: 11rem;
+  text-align: center;
+  grid-row: 6/7;
+  grid-column: 2/3;
+}
+
+.circle::after {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: -4rem;
+  background: black;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.about {
+  // @include standardGridContainer;
+}

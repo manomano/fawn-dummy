@@ -1,0 +1,11 @@
+@mixin bigTitle {
+  color: black;
+  font-size: 5rem;
+  font-family: "dad";
+}
+
+@mixin standardGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12%;
+}
